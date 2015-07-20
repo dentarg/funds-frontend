@@ -1,5 +1,9 @@
 # funds-frontend
 
+## `ENV`
+
+    REDIS_URL
+
 ## Start
 
     redis-server
