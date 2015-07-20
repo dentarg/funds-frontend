@@ -6,7 +6,3 @@ gem "sinatra-contrib"
 gem "redis"
 gem "haml"
 gem "thin"
-
-group :development do
-  gem "foreman"
-end
