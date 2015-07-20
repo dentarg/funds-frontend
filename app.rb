@@ -6,8 +6,7 @@ require 'haml'
 
 enable :inline_templates
 
-uri = URI.parse(ENV["REDISTOGO_URL"])
-R = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+R = Redis.new
 
 get '/' do
   @documents = R.keys('*')
