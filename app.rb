@@ -14,6 +14,7 @@ get '/' do
 end
 
 get '/:doc' do
+  headers['Content-Type'] = 'text/html;charset=iso-8859-1'
   R.get params['doc']
 end
 
