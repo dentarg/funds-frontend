@@ -13,3 +13,7 @@
 
     brew install redis
     bundle
+
+## Deploy
+
+master branch is automatically deployed.
