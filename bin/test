@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# echo commands
+set -x
+
+# install app dependencies
+bundle install
+
+# start app and wait for it
+bundle exec rackup &
+sleep 3
+
+# run the test and save the result
+curl --silent --fail http://localhost:9292/
+test_result=$?
+
+# stop app
+kill $!
+wait $!
+
+exit $test_result
